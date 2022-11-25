@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Declaring color variables start */
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* Transparent white (paragraphs):  */
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+    /* Very light gray (background, headings, buttons) */
+
+    --very-light-gray: hsl(0, 0%, 95%);
+
+}
+/* color variables stop */
+
+body {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--very-light-gray);
+    min-height: 100vh;
+    font-family: 'Big Shoulders Display', cursive;
+
+}
+
+
+.container {
+    max-width: 960px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin:2rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+
+.sedans  {
+    background-color: var(--bright-orange);
+   
+    
+
+}
+
+.suv {
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+    
+}
+
+.sedans,
+.suv,
+.luxury {
+    padding: 3rem;
+    color: var(--transparent-white);
+    /* margin: 2rem auto; */
+    
+    
+}
+
+.sedans h2,
+.suv h2,
+.luxury h2 {
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    font-size: 30px ;
+    padding-top: 2rem;
+
+}
+
+.sedans p,
+.suv p,
+.luxury p {
+    font-size: 15px ;
+    padding-top: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+
+/* Links setting start */
+.sedans a,
+.suv a,
+.luxury a {
+    padding: 10px 25px;
+    text-decoration: none;
+    background-color: var(--very-light-gray);
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+
+}
+
+/* Links setting stop */
+
+/* Links color start */
+.sedans a {
+    color: var(--bright-orange);
+
+
+}
+
+
+.suv a {
+    color: var(--dark-cyan);
+}
+
+.luxury a {
+    color: var(--very-dark-cyan);
+}
+
+/* Links color stop */
+
+/* Links hover start */
+
+.sedans a:hover {
+    background-color: var(--bright-orange);
+    color: var(--very-light-gray);
+    border: 2px solid #fff;
+    text-transform: capitalize;
+
+}
+
+.suv a:hover {
+    background-color: var(--dark-cyan);
+    color: var(--very-light-gray);
+    border: 2px solid #fff;
+    text-transform: capitalize;
+
+
+}
+
+.luxury a:hover {
+    background-color: var(--very-dark-cyan);
+    color: var(--very-light-gray);
+    border: 2px solid #fff;
+    text-transform: capitalize;
+}
+
+/* Links color stop */
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media query declaration */
+ @media only screen and (max-width:768px) {
+    .container {
+        grid-template-columns: 1fr;
+        
+    }
+    
+}
+
+
+@media only screen and (max-width:425px) {
+    .container {
+        margin: 2rem 1rem;
+    }
+    
+} 
