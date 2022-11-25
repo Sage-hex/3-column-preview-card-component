@@ -36,12 +36,12 @@ body {
 
 
 .container {
-    max-width: 960px;
+    /* max-width: 960px; */
     border-radius: 0.5rem;
     overflow: hidden;
     margin:2rem 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
     
 }
 
@@ -67,7 +67,7 @@ body {
 .luxury {
     padding: 3rem;
     color: var(--transparent-white);
-    /* margin: 2rem auto; */
+    
     
     
 }
@@ -164,8 +164,10 @@ body {
 }
 
 /* Media query declaration */
- @media only screen and (max-width:768px) {
+
+@media only screen and (max-width:768px) {
     .container {
+        display: grid;
         grid-template-columns: 1fr;
         
     }
@@ -179,3 +181,13 @@ body {
     }
     
 } 
+
+@media only screen and (min-width:992px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 900px;
+
+    }
+    
+}
